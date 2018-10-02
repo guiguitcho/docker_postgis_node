@@ -9,7 +9,8 @@ RUN apt-get install -y lbzip2\
 	yarn\
 	postgis\
 	curl\
-	python-gdal
+	python-gdal\
+	nano
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
