@@ -14,7 +14,7 @@ RUN apt-get install -y lbzip2\
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
-Run apt-get install -y nodejs
+RUN apt-get install -y nodejs
 
 RUN export EDITOR=nano
 
