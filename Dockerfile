@@ -21,6 +21,4 @@ RUN export EDITOR=nano
 # Permet une authentification avec password sans compte user
 RUN sed -i 's/^.*local   all             all                                     peer.*$/local   all             all                                     md5/' /etc/postgresql/10/main/pg_hba.conf
 
-EXPOSE $PORT
-
 #ADD bin /usr/bin
