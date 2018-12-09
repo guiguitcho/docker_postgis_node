@@ -14,10 +14,12 @@ RUN apt-get install -y lbzip2\
 	cmake\
 	gfortran\
 	python-dev\
-	nano
+	nano\
+	apt-transport-https
 
-RUN apt remove cmdtest
-RUN apt remove yarn
+RUN apt-get remove -y cmdtest
+RUN apt-get remove -y yarn
+
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - 
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
