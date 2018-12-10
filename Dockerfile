@@ -15,7 +15,8 @@ RUN apt-get install -y lbzip2\
 	gfortran\
 	python-dev\
 	nano\
-	apt-transport-https
+	apt-transport-https\
+	build-essential
 
 RUN apt-get remove -y cmdtest
 RUN apt-get remove -y yarn
