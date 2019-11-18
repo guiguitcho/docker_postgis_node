@@ -1,4 +1,4 @@
-FROM kartoza/postgis:10.0-2.4
+FROM kartoza/postgis:11.0-2.5
 
 
 RUN apt-get update -y && apt-get upgrade -y
