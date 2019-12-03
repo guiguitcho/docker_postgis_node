@@ -28,7 +28,8 @@ RUN add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
-RUN apt-get update -y && apt-get install docker-ce docker-ce-cli containerd.io
+   
+RUN apt-get update -y  && apt-get install -y docker-ce docker-ce-cli containerd.io
 
 RUN apt-get remove -y cmdtest
 RUN apt-get remove -y yarn
