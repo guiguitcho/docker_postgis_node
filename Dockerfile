@@ -15,8 +15,7 @@ RUN apt-get install -y lbzip2\
 	gfortran\
 	python-dev\
 	nano\
-	apt-transport-https\
-	build-essential
+	build-essential\
 	apt-transport-https \
     	ca-certificates \
     	curl \
