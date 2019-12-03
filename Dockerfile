@@ -17,6 +17,19 @@ RUN apt-get install -y lbzip2\
 	nano\
 	apt-transport-https\
 	build-essential
+	apt-transport-https \
+    	ca-certificates \
+    	curl \
+    	gnupg2 \
+    	software-properties-common
+	
+#Installation de Docker
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+RUN add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+RUN apt-get update -y && apt-get install docker-ce docker-ce-cli containerd.io
 
 RUN apt-get remove -y cmdtest
 RUN apt-get remove -y yarn
@@ -24,9 +37,10 @@ RUN apt-get remove -y yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - 
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
+#Installation de Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
-
 RUN apt-get update -y  && apt-get install -y nodejs 
+
 RUN apt-get install -y --no-install-recommends yarn
 
 RUN npm install -g pm2
