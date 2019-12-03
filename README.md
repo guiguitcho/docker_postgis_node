@@ -3,5 +3,5 @@ Docker from kartoza postgis
   + node
   + gdal
   + eccodes
-  + python + pip3 + Magics
+  + docker  
   + stuff
